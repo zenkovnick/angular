@@ -6,12 +6,12 @@
             <option value="name">Alphabetical</option>
             <option value="age">Newest</option>
         </select>
-
+        <a href="#/phones/new">Add new phone</a>
 
         <ul class="phones">
             <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail phone-listing">
-                <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}" /></a>
-                <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+                <a href="#/phones/{{phone.phone_id}}" class="thumb"><img ng-src="{{phone.image_url}}" /></a>
+                <a href="#/phones/{{phone.phone_id}}">{{phone.name}}</a>
                 <p>{{phone.snippet}}</p>
             </li>
         </ul>

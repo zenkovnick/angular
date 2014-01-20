@@ -1,0 +1,23 @@
+<a href="#/phones">Back to list</a>
+<form name="newPhone" novalidate ng-controller="formCtrl" ng-submit="submit()">
+    <ul>
+        <li>
+            <label for="form_name">Model: </label>
+            <input id="form_name" ng-model="newPhone.name" required/>
+        </li>
+        <li>
+            <label for="form_id">ID: </label>
+            <input id="form_id" ng-model="newPhone.id" required/>
+        </li>
+        <li>
+            <label for="form_snippet">Snippet: </label>
+            <input id="form_snippet" ng-model="newPhone.snippet" required/>
+        </li>
+        <li>
+            <input ng-file-select type="file" multiple  />
+        </li>
+        <li>
+            <input type="submit" value="Add" ng-disabled="newPhone.$invalid"/>
+        </li>
+    </ul>
+</form>
